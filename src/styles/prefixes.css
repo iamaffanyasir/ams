@@ -1,0 +1,68 @@
+/* Browser prefixes for better compatibility */
+.hero-content {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.campaign-container,
+.newsletter-container,
+.hero-content,
+.stats-container,
+.service-icon,
+.donate-now-btn,
+.donation-grid-row,
+.step,
+.footer-newsletter {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+/* Animation and transition prefixes */
+.donation-card,
+.service-card,
+.donation-image,
+.blog-post-image img,
+.arrow,
+.view-more-link .arrow,
+.donate-now-link .arrow,
+.newsletter-submit {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Transform prefixes */
+.donation-card:hover,
+.service-card:hover,
+.donation-item:hover {
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+
+.donation-card:hover .donation-image,
+.blog-post:hover .blog-post-image img {
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.donate-now-link:hover .arrow,
+.view-more-link:hover .arrow,
+.service-donate-btn:hover .arrow {
+  -webkit-transform: translateX(5px);
+  -moz-transform: translateX(5px);
+  -ms-transform: translateX(5px);
+  transform: translateX(5px);
+}
