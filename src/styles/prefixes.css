@@ -18,7 +18,8 @@
 .donate-now-btn,
 .donation-grid-row,
 .step,
-.footer-newsletter {
+.footer-newsletter,
+.navbar-container {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -33,7 +34,9 @@
 .arrow,
 .view-more-link .arrow,
 .donate-now-link .arrow,
-.newsletter-submit {
+.newsletter-submit,
+.navbar-links,
+.mobile-menu-btn {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
@@ -65,4 +68,78 @@
   -moz-transform: translateX(5px);
   -ms-transform: translateX(5px);
   transform: translateX(5px);
+}
+
+/* Additional transform prefixes for the mobile menu */
+.navbar-links {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+}
+
+.navbar-links.active {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+}
+
+/* Object-fit prefixes for How We Works section */
+.how-works-image img {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
+/* Flex prefixes for How We Works */
+.how-works-steps {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+/* Media query prefixes */
+@media (max-width: 768px) {
+  .navbar-links {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .footer-top,
+  .newsletter-container,
+  .campaign-container,
+  .join-movement-header,
+  .blog-header,
+  .how-works-container {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 992px) {
+  .how-works-container {
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+/* Mobile menu button prefixes */
+.mobile-menu-btn:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }

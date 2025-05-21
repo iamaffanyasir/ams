@@ -3,6 +3,9 @@
   color: white;
   padding: 15px 0;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .navbar-container {
@@ -12,6 +15,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  position: relative;
 }
 
 .navbar-logo a {
@@ -37,6 +41,7 @@
   color: white;
   text-decoration: none;
   padding: 5px 0;
+  transition: color 0.2s ease;
 }
 
 .navbar-links a:hover {
@@ -50,8 +55,105 @@
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
 .donate-btn:hover {
   background-color: #2541d0;
+}
+
+/* Mobile menu styles */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1002;
+  outline: none;
+  transition: transform 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive styles - Fixed mobile menu */
+@media (max-width: 992px) {
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .mobile-menu-btn {
+    display: block;
+    position: relative;
+    right: 0;
+    order: 3;
+  }
+  
+  .navbar-logo {
+    order: 1;
+  }
+  
+  .navbar-button {
+    position: relative;
+    z-index: 1002;
+    order: 2;
+    margin-right: 15px; /* Add space between donate button and hamburger */
+  }
+  
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1001;
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    display: flex;
+    transform: translateX(100%); /* Change to right-to-left animation */
+  }
+  
+  .navbar-links.active {
+    transform: translateX(0);
+  }
+  
+  .navbar-links a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-logo a {
+    font-size: 1.2rem;
+  }
+  
+  .donate-btn {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-menu-btn {
+    font-size: 1.5rem;
+    margin-left: 10px;
+  }
 }

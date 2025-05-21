@@ -538,106 +538,231 @@
   background-repeat: no-repeat;
 }
 
-@media (max-width: 992px) {
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 3rem;
   }
   
-  .services-title {
-    font-size: 2.4rem;
+  .mission-statement {
+    font-size: 2.8rem;
+  }
+  
+  .services-title, .movement-title {
+    font-size: 2.5rem;
+  }
+  
+  .campaign-title {
+    font-size: 2.2rem;
+  }
+  
+  .how-works-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  
+  .mission-statement {
+    font-size: 2.2rem;
+  }
+  
+  .services-title, .movement-title {
+    font-size: 2.2rem;
+  }
+  
+  .how-works-container {
+    flex-direction: column;
+  }
+  
+  .how-works-image {
+    margin-bottom: 30px;
+  }
+  
+  .newsletter-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .newsletter-content {
+    max-width: 100%;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 2rem;
+  }
+  
+  .newsletter-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
+  .hero-content h1 {
+    font-size: 2.2rem;
+    text-align: center;
   }
   
-  .services-title {
+  .hero-description p {
+    text-align: center;
+    font-size: 1rem;
+  }
+  
+  .mission-statement {
+    font-size: 1.8rem;
+  }
+  
+  .services-title, .movement-title, .blog-title, .campaign-title {
+    font-size: 1.8rem;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
+  .campaign-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .campaign-video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .step-title {
+    font-size: 1rem;
+  }
+  
+  .blog-header {
+    flex-direction: column;
+  }
+  
+  .blog-posts-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  
+  /* Hide how-works-content on mobile */
+  .how-works-content {
+    display: none;
+  }
+  
+  /* Adjust how-works-section layout when content is hidden */
+  .how-works-container {
+    flex-direction: column;
+  }
+  
+  .how-works-image {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 0;
+  }
+  
+  .how-works-section {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding-top: 20px;
+  }
+  
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+  
+  .donate-now-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+  
+  .hero-images {
+    display: none;
+  }
+  
+  .stats-section {
+    padding: 30px 0;
+  }
+  
+  .stat-number {
     font-size: 2rem;
   }
   
-  .services-description {
-    justify-content: flex-start;
+  .about-us-section {
+    padding: 40px 0;
+  }
+  
+  .mission-statement {
+    font-size: 1.5rem;
+  }
+  
+  .services-title {
+    font-size: 1.5rem;
+  }
+  
+  .campaign-title {
+    font-size: 1.5rem;
+  }
+  
+  .how-works-section {
+    padding: 40px 0;
+  }
+  
+  .how-works-title {
+    font-size: 1.5rem;
+  }
+  
+  .movement-title {
+    font-size: 1.5rem;
+  }
+  
+  .newsletter-section {
+    padding: 40px 0;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 1.5rem;
+  }
+  
+  .blog-title {
+    font-size: 1.5rem;
   }
 }
 
-/* Campaign Section */
-.campaign-section {
-  position: relative;
-  background-image: url('https://images.unsplash.com/photo-1516941064643-74aacd84843c?ixlib=rb-4.0.3');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
+/* Fix for newsletter section in HomePage.js */
+.newsletter-section .newsletter-container {
   display: flex;
-  align-items: center;
-  color: white;
-}
-
-.campaign-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  align-items: center;
-}
-
-.campaign-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  width: 100%;
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
-.campaign-content {
-  max-width: 500px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Ensures the button aligns to the left */
+@media (max-width: 768px) {
+  .newsletter-section .newsletter-container {
+    flex-direction: column;
+  }
+  
+  .newsletter-section .newsletter-content {
+    text-align: center;
+    margin-bottom: 30px;
+  }
 }
 
-.campaign-label {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
-  display: block;
-  text-align: left;
-}
-
-.campaign-title {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  font-weight: 700;
-  margin-bottom: 30px;
-  text-align: left;
-}
-
-.campaign-donate-btn {
-  display: inline-block;
-  background-color: white;
-  color: black;
-  text-decoration: none;
-  padding: 12px 24px;
-  font-weight: 600;
-  border-radius: 0;
-  transition: all 0.3s ease;
-  align-self: flex-start; /* Ensures the button aligns to the left */
-}
-
-/* How Works Section */
+/* Enhanced How Works Section */
 .how-works-section {
   padding: 80px 0;
   background-color: #111;
   color: white;
-  text-align: left; /* Explicitly set left alignment for the entire section */
+  text-align: left;
 }
 
 .how-works-container {
@@ -651,18 +776,21 @@
 .how-works-image {
   flex: 1;
   position: relative;
+  max-height: 600px;
+  overflow: hidden;
 }
 
 .how-works-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .how-works-content {
   flex: 1;
   padding: 20px 0;
-  text-align: left; /* Ensure content is left-aligned */
+  text-align: left;
 }
 
 .how-works-label {
@@ -672,7 +800,7 @@
   margin-bottom: 10px;
   display: block;
   color: #ccc;
-  text-align: left; /* Explicitly left-align the label */
+  text-align: left;
 }
 
 .how-works-title {
@@ -680,20 +808,20 @@
   line-height: 1.2;
   font-weight: 700;
   margin-bottom: 40px;
-  text-align: left; /* Explicitly left-align the title */
+  text-align: left;
 }
 
 .how-works-steps {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  text-align: left; /* Ensure steps container is left-aligned */
+  text-align: left;
 }
 
 .step {
   display: flex;
   gap: 15px;
-  text-align: left; /* Ensure each step is left-aligned */
+  text-align: left;
 }
 
 .step-number {
@@ -701,446 +829,94 @@
   font-weight: 700;
   color: white;
   flex-shrink: 0;
-  text-align: left; /* Left-align step numbers */
+  text-align: left;
 }
 
 .step-content {
   flex: 1;
-  text-align: left; /* Ensure step content is left-aligned */
+  text-align: left;
 }
 
 .step-title {
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 5px;
-  text-align: left; /* Left-align step titles */
+  text-align: left;
 }
 
 .step-description {
   font-size: 0.9rem;
   color: #ccc;
   line-height: 1.6;
-  text-align: left; /* Left-align step descriptions */
-}
-
-/* Join the Movement Section */
-.join-movement-section {
-  padding: 80px 0;
-  background-color: #f8f9fa;
-}
-
-.join-movement-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.join-movement-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
-  gap: 40px;
-}
-
-.header-content {
-  flex: 1;
-}
-
-.movement-label {
-  color: #304FE9;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 10px;
   text-align: left;
-}
-
-.movement-title {
-  font-size: 2.8rem;
-  line-height: 1.2;
-  margin: 0;
-  font-weight: 700;
-  color: #000;
-  text-align: left;
-}
-
-.header-description {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-}
-
-.header-description p {
-  margin-bottom: 20px;
-  color: #555;
-  line-height: 1.6;
-  text-align: left;
-}
-
-.view-more-link {
-  color: #000;
-  text-decoration: none;
-  font-weight: 500;
-  display: flex;
-  align-items: center;
-}
-
-.view-more-link .arrow {
-  margin-left: 5px;
-  transition: transform 0.3s ease;
-}
-
-.view-more-link:hover .arrow {
-  transform: translateX(5px);
-}
-
-.donation-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-.donation-grid-row {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.donation-item {
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease;
-}
-
-.donation-item:hover {
-  transform: translateY(-5px);
-}
-
-.donation-photo {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-.donation-item-content {
-  padding: 20px;
-}
-
-.donation-item-content h3 {
-  margin: 0 0 10px 0;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: left;
-}
-
-.donation-item-content p {
-  margin: 0 0 15px 0;
-  font-size: 0.9rem;
-  color: #666;
-  text-align: left;
-}
-
-.fund-progress {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.fund-raised {
-  font-size: 0.9rem;
-  text-align: left;
-}
-
-.target {
-  color: #999;
-}
-
-.progress-percentage {
-  font-size: 0.9rem;
-  font-weight: 600;
-  text-align: right;
-}
-
-.progress-bar {
-  height: 6px;
-  background-color: #f0f0f0;
-  border-radius: 3px;
-  overflow: hidden;
-  margin-bottom: 15px;
-}
-
-.progress {
-  height: 100%;
-  background-color: #304FE9;
-  border-radius: 3px;
-}
-
-.donate-now-link {
-  display: inline-flex;
-  align-items: center;
-  color: #000;
-  text-decoration: none;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: color 0.3s ease;
-}
-
-.donate-now-link .arrow {
-  margin-left: 5px;
-  transition: transform 0.3s ease;
-}
-
-.donate-now-link:hover {
-  color: #304FE9;
-}
-
-.donate-now-link:hover .arrow {
-  transform: translateX(5px);
 }
 
 @media (max-width: 1200px) {
-  .donation-grid-row {
-    grid-template-columns: repeat(3, 1fr);
+  .how-works-container {
+    gap: 30px;
+  }
+  
+  .how-works-title {
+    font-size: 2.1rem;
   }
 }
 
 @media (max-width: 992px) {
-  .join-movement-header {
+  .how-works-container {
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
   }
   
-  .movement-title {
-    font-size: 2rem;
+  .how-works-image {
+    width: 100%;
+    height: 400px;
   }
   
-  .donation-grid-row {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .donation-grid-row {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Newsletter Section */
-.newsletter-section {
-  position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                    url('https://images.unsplash.com/photo-1511949860663-92c5c57d48a7?ixlib=rb-4.0.3');
-  background-size: cover;
-  background-position: center;
-  padding: 80px 0;
-  color: white;
-}
-
-.newsletter-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.newsletter-content {
-  max-width: 500px;
-  text-align: left;
-}
-
-.newsletter-content h3 {
-  font-size: 1rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  margin: 0 0 10px 0;
-}
-
-.newsletter-content h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0;
-}
-
-.newsletter-form {
-  background-color: white;
-  border-radius: 5px;
-  padding: 20px;
-  width: 400px;
-  color: #333;
-}
-
-.form-header {
-  background-color: #304FE9;
-  color: white;
-  padding: 15px;
-  font-weight: 500;
-  margin: -20px -20px 20px -20px;
-  border-radius: 5px 5px 0 0;
-  text-align: center;
-}
-
-.form-input {
-  display: block;
-  width: 100%;
-  padding: 10px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.subscribe-btn {
-  width: 100%;
-  background-color: #304FE9;
-  color: white;
-  border: none;
-  padding: 12px 15px;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-}
-
-.subscribe-btn:hover {
-  background-color: #2543c8;
-}
-
-.subscribe-btn .arrow {
-  margin-left: 5px;
-}
-
-/* Blog Section */
-.blog-section {
-  padding: 80px 0;
-  background-color: #fff;
-}
-
-.blog-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-.blog-header {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-  gap: 30px;
-}
-
-.blog-title-area {
-  flex: 1;
-}
-
-.blog-label {
-  color: #304FE9;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  display: block;
-  margin-bottom: 15px;
-  text-align: left;
-}
-
-.blog-title {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  margin: 0;
-  font-weight: 700;
-  text-align: left;
-}
-
-.blog-description {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.blog-description p {
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: left;
-}
-
-.blog-posts-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
-}
-
-.blog-post {
-  text-align: left;
-}
-
-.blog-post-image {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  margin-bottom: 15px;
-  border-radius: 5px;
-}
-
-.blog-post-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.blog-post:hover .blog-post-image img {
-  transform: scale(1.05);
-}
-
-.blog-post-date {
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 10px;
-}
-
-.blog-post-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin: 0 0 10px 0;
-}
-
-.blog-post-excerpt {
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.5;
-  margin: 0;
-}
-
-@media (max-width: 1100px) {
-  .blog-posts-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .how-works-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
 @media (max-width: 768px) {
-  .blog-header {
-    flex-direction: column;
+  .how-works-section {
+    padding: 60px 0;
   }
   
-  .blog-title {
-    font-size: 2rem;
+  .how-works-image {
+    height: 300px;
+  }
+  
+  .how-works-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .step {
+    gap: 10px;
   }
 }
 
 @media (max-width: 576px) {
-  .blog-posts-grid {
-    grid-template-columns: 1fr;
+  .how-works-section {
+    padding: 40px 0;
+  }
+  
+  .how-works-image {
+    height: 250px;
+  }
+  
+  .how-works-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+  
+  .step-title {
+    font-size: 1rem;
+  }
+  
+  .step-description {
+    font-size: 0.85rem;
   }
 }

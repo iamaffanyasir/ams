@@ -478,7 +478,16 @@ const HomePage = () => {
             <h3>Subscribe Our Newsletter</h3>
             <h2>Join Us Empowering Communities and Changing Lives</h2>
           </div>
-          
+          <div className="newsletter-form">
+            <div className="form-header">Subscribe to our newsletter now</div>
+            <form>
+              <input type="text" placeholder="Name" className="form-input" />
+              <input type="email" placeholder="Email" className="form-input" />
+              <button type="submit" className="subscribe-btn">
+                Subscribe Now <span className="arrow">→</span>
+              </button>
+            </form>
+          </div>
         </div>
       </section>
 

@@ -16,7 +16,12 @@ const Footer = () => {
                 SIGN UP FOR OUR<br />
                 MONTHLY NEWSLETTER
               </div>
-              
+              <div className="newsletter-form">
+                <input type="email" placeholder="Email address" className="newsletter-input" />
+                <button type="submit" className="newsletter-submit">
+                  <span className="arrow-icon">→</span>
+                </button>
+              </div>
             </div>
           </div>
           

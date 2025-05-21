@@ -5,13 +5,25 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  min-width: 320px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .App {
+  padding-top: 0;
   text-align: center;
   min-height: 100vh;
   display: flex;
@@ -55,4 +67,17 @@ body {
 
 main {
   flex: 1;
+}
+
+/* Responsive font size */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
 }

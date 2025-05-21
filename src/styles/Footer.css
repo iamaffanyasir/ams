@@ -158,6 +158,7 @@
   text-align: left;
 }
 
+/* Responsive breakpoints */
 @media (max-width: 992px) {
   .footer-top {
     flex-direction: column;
@@ -171,6 +172,7 @@
   .footer-links {
     width: 100%;
     gap: 40px;
+    flex-wrap: wrap;
   }
 }
 
@@ -182,5 +184,25 @@
   
   .footer-column {
     margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .footer {
+    padding: 40px 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container {
+    padding: 0 15px;
+  }
+  
+  .footer-logo {
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+  }
+  
+  .newsletter-title {
+    font-size: 0.8rem;
   }
 }
